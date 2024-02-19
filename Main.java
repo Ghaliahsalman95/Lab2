@@ -44,7 +44,9 @@ public class Main {
         int appear=input.nextInt();
         for( i =0;i<original.length;i++){
             if(appear==original[i]){times+=1;}}
-        System.out.println(appear+" occurs "+times+" times");
+
+        System.out.print(Arrays.toString(original)+"\n"+appear+" occurs "+times+" times");
+        System.out.println("");
 
 
         //-----------------------------------------Exercise 3----------------
@@ -58,14 +60,15 @@ Expected Output:
 3 largest elements of the said array are:
 100 25 17*/
 //--------------------------Exercise 3--------------------------
-        System.out.println("Exercise 3 ");
+        System.out.println("------- Exercise 3 -----------------------");
 
         int []largest={1, 4, 17, 7, 25, 3, 100};
+        System.out.print(Arrays.toString(largest)+"\n");
         Arrays.sort(largest);//sort array from smallest to biggest
         System.out.println("Enter k to extract k largest number ");
         int k=input.nextInt();
         for(int re=largest.length-1;re>=largest.length-k;re--){//start with last element which big element there
-            System.out.println(largest[re]+" ");//print k numbers
+            System.out.print(largest[re]+" ");//print k numbers
         }
                // just to check if sort it or not
 
@@ -79,6 +82,8 @@ Expected Output:
 }*/
 
 //-----------------------------------------------------Exercise 4-----------------
+        System.out.println("");
+        System.out.println("------- Exercise 4 -----------------------");
                 int [] resrve={5,4,3,2,1};
         for (int ree = 0; ree < resrve.length / 2; ree++) {//solving by swapping elements
             int temp = resrve[ree];
@@ -96,8 +101,9 @@ Expected Output:
 5. To Stop
 the size of the array should be entered by the user*/
 boolean check=true;
+        System.out.println("------- Exercise 5 -----------------------");
         System.out.println("Enter size of list");
-int [] element=new int[input.nextInt()];
+        int [] element=new int[input.nextInt()];
 do{
     System.out.println("1. Accept elements of an array");
     System.out.println("2. Display elements of an array");
@@ -123,6 +129,7 @@ do{
                 if(s==search){
                     System.out.println("We found an element "+s);break;
                 }
+                else {System.out.println("We Not found an element "+s);break;}
             }
         break;
         case 4:
@@ -133,6 +140,8 @@ do{
     }
 }while(check);
 //----------------------------------Exercise 6
+        System.out.println("------- Exercise 6 -----------------------");
+
 
 /*6. Create a method that generates a random number within a given range. Allow the user to
 specify the range and call the method to display random numbers.
@@ -159,7 +168,8 @@ based on the totalScore.
 • Special characters: Absence (0 points), Presence (2 points).
 • Uppercase and lowercase letters: Absence of both (0 points), presence of both (3
 points).
-*/
+*/        System.out.println("------- Exercise 7 -----------------------");
+
         System.out.println("Please Enter Password ");
         String pass=input.next();
         pass=pass.replace(" ","");
@@ -171,6 +181,10 @@ points).
 
 
 
+//-----------------------------------------------Exercise 8--------------------
+        System.out.println("------- Exercise 8 -----------------------");
+        System.out.println("Enter the number of Fibonacci terms to generate:");
+       Fibonacci(input.nextInt());
 
 
 
@@ -210,6 +224,26 @@ int absence=0;
     else{return uppercase_lowercase_Score;}
 
 return uppercase_lowercase_Score;}
+
+//-----------------------------
+    //*8. Create a method that generates the Fibonacci sequence up to a specified number of terms.
+    //Hint: The Fibonacci sequence is a mathematical sequence of numbers that starts with 0 and 1,
+    //and each subsequent number in the sequence is the sum of the two preceding ones.*//
+public static void Fibonacci(int f) {
+
+    //int[] fib=new int[f];
+    int numZero = 0,numOne = 1,num3;
+
+    if(f<=1){System.out.println(1);}
+   else{ for (int fibo = 3; fibo <= f; fibo++) {// start with 3 because 1 and 2 not count
+        num3=numOne+numZero;
+        numZero=numOne;
+        numOne=num3;
+        System.out.print(num3+"\t");
+    }
+    }
+}
+
 
 
 }
