@@ -225,13 +225,12 @@ int absence=0;
 
 return uppercase_lowercase_Score;}
 
-//-----------------------------
+//----------------------------------Exercise 8--------------------
     //*8. Create a method that generates the Fibonacci sequence up to a specified number of terms.
     //Hint: The Fibonacci sequence is a mathematical sequence of numbers that starts with 0 and 1,
     //and each subsequent number in the sequence is the sum of the two preceding ones.*//
 public static void Fibonacci(int f) {
 
-    //int[] fib=new int[f];
     int numZero = 0,numOne = 1,num3;
 
     if(f<=1){System.out.println(1);}
