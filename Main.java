@@ -234,7 +234,9 @@ public static void Fibonacci(int f) {
     int numZero = 0,numOne = 1,num3;
 
     if(f<=1){System.out.println(1);}
-   else{ for (int fibo = 3; fibo <= f; fibo++) {// start with 3 because 1 and 2 not count
+   else{
+        System.out.print(numZero+"\t"+numOne+"\t");
+       for (int fibo = 3; fibo <= f; fibo++) {// start with 3 because 1 and 2 not count
         num3=numOne+numZero;
         numZero=numOne;
         numOne=num3;
